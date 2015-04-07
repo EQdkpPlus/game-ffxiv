@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('ffxiv')) {
 	class ffxiv extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '3.0.0';
+		public $version				= '3.0.1';
 		protected $this_game		= 'ffxiv';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
@@ -72,6 +72,7 @@ if(!class_exists('ffxiv')) {
 						3 	=> 'all',		// Hyuran
 						4 	=> 'all',		// Miqote
 						5 	=> 'all',		// Lalafell
+						6 	=> 'all',		// Au Ra
 					),
 				),
 			),
