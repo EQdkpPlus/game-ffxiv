@@ -51,7 +51,7 @@ if(!class_exists('ffxiv')) {
 					'faction' => array(
 						'gridania'	=> 'all',
 						'limsa'		=> 'all',
-						'Uldah'		=> 'all',
+						'uldah'		=> 'all',
 					),
 				),
 			),
