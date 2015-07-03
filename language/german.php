@@ -35,9 +35,9 @@ $german_array = array(
 		8	=> 'Beschwörer',
 		9	=> 'Gelehrter',
 		10	=> 'Ninja',
-		//11	=> 'Dunkler Ritter',
-		//12	=> 'Astrologe',
-		//13	=> 'Maschinist',
+		11	=> 'Dunkler Ritter',
+		12	=> 'Astrologe',
+		13	=> 'Maschinist',
 	),
 	'races' => array(
 		0	=> 'Unbekannt',
@@ -46,7 +46,7 @@ $german_array = array(
 		3	=> 'Hyuran',
 		4	=> 'Miqote',
 		5	=> 'Lalafell',
-		//6	=> 'Au Ra',
+		6	=> 'Au Ra',
 	),
 	'factions' => array(
 		'gridania'	=> 'Gridania',

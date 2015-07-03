@@ -35,9 +35,9 @@ $english_array = array(
 		8 	=> 'Summoner',
 		9	=> 'Scholar',
 		10	=> 'Ninja',
-		//11	=> 'Dark Knight',   //Tank
-		//12	=> 'Astrologian',   //HEaler
-		//13	=> 'Machinist',  //  Damage Dealer
+		11	=> 'Dark Knight',   //Tank
+		12	=> 'Astrologian',   //HEaler
+		13	=> 'Machinist',  //  Damage Dealer
 	),
 	'races' => array(
 		0	=> 'Unknown',
@@ -46,7 +46,7 @@ $english_array = array(
 		3	=> 'Hyuran',
 		4	=> 'Miqote',
 		5	=> 'Lalafell',
-		//6	=> 'Au Ra',
+		6	=> 'Au Ra',
 	),
 	'factions' => array(
 		'gridania'	=> 'Gridania',
@@ -57,7 +57,7 @@ $english_array = array(
 		'ffxiv'							=> 'Final Fantasy XIV',
 		'tank'							=> 'Tank',
 		'support'						=> 'Healer',
-		'damage_dealer'				=> 'Damage Dealer',
+		'damage_dealer'					=> 'Damage Dealer',
 
 		// Profile information
 		'uc_gender'						=> 'Gender',
