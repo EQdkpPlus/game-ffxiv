@@ -35,7 +35,7 @@ $german_array = array(
 		8	=> 'Beschwörer',
 		9	=> 'Gelehrter',
 		10	=> 'Ninja',
-		11	=> 'Dunkler Ritter',
+		11	=> 'Dunkelritter',
 		12	=> 'Astrologe',
 		13	=> 'Maschinist',
 	),

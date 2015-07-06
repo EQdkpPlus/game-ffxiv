@@ -35,9 +35,9 @@ $english_array = array(
 		8 	=> 'Summoner',
 		9	=> 'Scholar',
 		10	=> 'Ninja',
-		11	=> 'Dark Knight',   //Tank
-		12	=> 'Astrologian',   //HEaler
-		13	=> 'Machinist',  //  Damage Dealer
+		11	=> 'Dark Knight',
+		12	=> 'Astrologian',
+		13	=> 'Machinist',
 	),
 	'races' => array(
 		0	=> 'Unknown',
