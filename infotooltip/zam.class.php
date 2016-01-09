@@ -36,28 +36,22 @@ if(!class_exists('zam')) {
 		public function __construct($init=false, $config=false, $root_path=false, $cache=false, $puf=false, $pdl=false){
 			parent::__construct($init, $config, $root_path, $cache, $puf, $pdl);
 			$g_settings = array(
-				'ffxiv' => array('icon_loc' => 'http:', 'icon_ext' => '', 'default_icon' => 'unknown'),
+				'ffxiv' => array('icon_loc' => 'http://img.finalfantasyxiv.com/lds/pc/global/images/', 'icon_ext' => '.png', 'default_icon' => 'unknown'),
 			);
 			$this->settings = array(
 				'itt_icon_loc' => array(	'name' => 'itt_icon_loc',
 											'language' => 'pk_itt_icon_loc',
-											'fieldtype' => 'text',
-											'size' => false,
-											'options' => false,
+											'type' => 'text',
 											'default' => ((isset($g_settings[$this->config['game']]['icon_loc'])) ? $g_settings[$this->config['game']]['icon_loc'] : ''),
 				),
 				'itt_icon_ext' => array(	'name' => 'itt_icon_ext',
 											'language' => 'pk_itt_icon_ext',
-											'fieldtype' => 'text',
-											'size' => false,
-											'options' => false,
+											'type' => 'text',
 											'default' => ((isset($g_settings[$this->config['game']]['icon_ext'])) ? $g_settings[$this->config['game']]['icon_ext'] : ''),
 				),
 				'itt_default_icon' => array('name' => 'itt_default_icon',
 											'language' => 'pk_itt_default_icon',
-											'fieldtype' => 'text',
-											'size' => false,
-											'options' => false,
+											'type' => 'text',
 											'default' => ((isset($g_settings[$this->config['game']]['default_icon'])) ? $g_settings[$this->config['game']]['default_icon'] : ''),
 				),
 			);
@@ -88,22 +82,20 @@ if(!class_exists('zam')) {
 			$searchagain++;
 			$encoded_name = urlencode($itemname);
 			if (!$lang) $lang = "en";
-			$link = "http://xivdb.com/modules/search/search.php?query=".$encoded_name."&page=1&pagearray=%7B%7D&language=".$this->getLangID($lang)."&filters=null&showview=0";			
+			//$link = "http://xivdb.com/modules/search/search.php?query=".$encoded_name."&page=1&pagearray=%7B%7D&language=".$this->getLangID($lang)."&filters=null&showview=0";			
+			
+			$link = "http://api.xivdb.com/search?page=0&string=".$encoded_name."&language=".$lang;
 			$data = $this->puf->fetch($link);
 			$item_id = false;
 			
+			$arrJson = json_decode($data, true);
 
 			$this->searched_langs[] = $lang;
-			if (preg_match_all('#href\=\"\?item\/(.*?)\/(.*?)\">(.*?)<\/a>#', $data, $matches))
-			{				
-				foreach ($matches[0] as $key => $match)
-				{
-					// Extract the item's ID from the match.
-					$item_id = (int)$matches[1][$key];
-					$found_name = strip_tags($matches[3][$key]);
-					
-					if(strcasecmp($itemname, $found_name) == 0) {
-						return array($item_id, 'items');
+			
+			if(is_array($arrJson) && isset($arrJson['items'])){
+				foreach($arrJson['items']['results'] as $var){
+					if(strcasecmp($itemname, $var['name']) == 0) {
+						return array($var['id'], 'items');
 					}
 				}
 			}
@@ -133,31 +125,30 @@ if(!class_exists('zam')) {
 			$item = array('id' => $item_id);
 			if(!$item_id) return null;
 			
-			$url = "http://xivdb.com/modules/fpop/fpop.php?callback=&lang=".$this->getLangID($lang)."&version=1.6&host=xivdb.com&type=item&id=".$item_id."&location=http%3A%2F%2Fxivdb.com%2F%3Ftooltip&convertQuotes=true&frameShadow=false&compact=false&statsOnly=false&replaceName=true&colorName=true&showIcon=true&_=1387608577170";
+			$url = "http://xivdb.com/tooltip?list[item]=".$item_id."&language=".$lang;
 			$item['link'] = $url;
 			$itemdata = $this->puf->fetch($item['link']);
 			//$itemdata = substr(trim($itemdata), 1);
 			//$itemdata = substr($itemdata, 0, -1);			
-			$arrData = json_decode($itemdata);
+			$arrData = json_decode($itemdata, true);
 			
-			
-			$strItemName = trim(strip_tags($arrData->name));
-
-			if ($strItemName != ""){
-				$item['icon'] = $arrData->icon;
-				$item['color'] = $arrData->color;
-
-				$template_html = trim(file_get_contents($this->root_path.'games/ffxiv/infotooltip/templates/ffxiv_popup.tpl'));
-				$template_html = str_replace('{ITEM_HTML}', $arrData->html, $template_html);
-				$item['html'] = $template_html;
-				$item['lang'] = $lang;
-				$item['name'] = $strItemName;
+			if(is_array($arrData) && isset($arrData[0])){
+				$strItemName = trim(strip_tags($arrData[0][4]['name']));
 				
-				
-			} else {
-				$item['baditem'] = true;
-				
+				if ($strItemName != ""){
+					$item['icon'] = $arrData[0][4]['icon'];
+					$item['color'] = $arrData[0][4]['color'];
+					$template_html = trim(file_get_contents($this->root_path.'games/ffxiv/infotooltip/templates/ffxiv_popup.tpl'));
+					$template_html = str_replace('{ITEM_HTML}', $arrData[0][3], $template_html);
+					$item['html'] = $template_html;
+					$item['lang'] = $lang;
+					$item['name'] = $strItemName;
+					
+					return $item;
+				}
 			}
+			
+			$item['baditem'] = true;
 
 			return $item;
 		}
