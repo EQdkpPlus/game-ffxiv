@@ -49,9 +49,9 @@ $english_array = array(
 		6	=> 'Au Ra',
 	),
 	'factions' => array(
-		'gridania'	=> 'Gridania',
-		'limsa'		=> 'Limsa Lominsa',
-		'uldah'		=> 'Uldah',
+		'twin_adder'	=> 'Order of the Twin Adder',
+		'maelstrom'		=> 'Maelstrom',
+		'flames'		=> 'The Immortal Flames',
 	),
 	'lang' => array(
 		'ffxiv'							=> 'Final Fantasy XIV',
@@ -63,14 +63,41 @@ $english_array = array(
 		'uc_gender'						=> 'Gender',
 		'uc_male'						=> 'Male',
 		'uc_female'						=> 'Female',
-		'uc_guild'						=> 'Guild',
+		'uc_guild'						=> 'Free Company',
 		'uc_race'						=> 'Race',
 		'uc_class'						=> 'Class',
-
+		'uc_cat_berufe'					=> 'Professions',
+		'uc_level'						=> 'Level',
+		
+		// Grand Company Information
+		'uc_grandcompany'				=> 'Grand Company',
+		'uc_twinadder'					=> 'Order of the Twin Adder',
+		'uc_maelstrom'					=> 'Maelstrom',
+		'uc_flames'						=> 'The Immortal Flames',
+		
+		// City-State Information
+		'uc_city'						=> 'City-state',
+		'uc_uldah'						=> "Ul'dah",
+		'uc_limsa'						=> 'Limsa Lominsa',
+		'uc_gridania'					=> 'Gridania',
+		
+		// Profession information
+		'up_alchemist'					=> 'Alchemist',
+		'up_leatherworker'				=> 'Leatherworker',
+		'up_goldsmith'					=> 'Goldsmith',
+		'up_culinarian'					=> 'Culinarian',
+		'up_blacksmith'					=> 'Blacksmith',
+		'up_armorer'					=> 'Armorer',
+		'up_weaver'						=> 'Weaver',
+		'up_carpenter'					=> 'Carpenter',
+		'up_fisher'						=> 'Fisher',
+		'up_botanist'					=> 'Botanist',
+		'up_miner'						=> 'Miner',
+		
 		// Admin Settings
-		'core_sett_fs_gamesettings'	=> 'Final Fantasy XI Settings',
-		'uc_faction'				=> 'Faction',
-		'uc_faction_help'			=> 'Select the default faction',
+		'core_sett_fs_gamesettings'	=> 'Final Fantasy XIV Settings',
+		'uc_faction'				=> 'Grand Company',
+		'uc_faction_help'			=> 'Select the Grand Company for your Free Company.',
 	),
 );
 ?>

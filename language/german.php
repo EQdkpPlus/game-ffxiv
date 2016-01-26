@@ -49,9 +49,9 @@ $german_array = array(
 		6	=> 'Au Ra',
 	),
 	'factions' => array(
-		'gridania'	=> 'Gridania',
-		'limsa'		=> 'Limsa Lominsa',
-		'uldah'		=> 'Uldah',
+		'twin_adder'	=> 'Bruderschaft der Morgenviper',
+		'maelstrom'		=> 'Mahlstrom',
+		'flames'		=> 'Legion der Unsterblichen',
 	),
 	'lang' => array(
 		'ffxiv'							=> 'Final Fantasy XIV',
@@ -63,14 +63,41 @@ $german_array = array(
 		'uc_gender'						=> 'Geschlecht',
 		'uc_male'						=> 'Männlich',
 		'uc_female'						=> 'Weiblich',
-		'uc_guild'						=> 'Gilde',
+		'uc_guild'						=> 'Freie Gesellschaft',
 		'uc_race'						=> 'Rasse',
 		'uc_class'						=> 'Klasse',
-
+		'uc_cat_berufe'					=> 'Berufe',
+		'uc_level'						=> 'Level',
+		
+		// Grand Company Information
+		'uc_grandcompany'				=> 'Staatliche Gesellschaft',
+		'uc_twinadder'					=> 'Bruderschaft der Morgenviper',
+		'uc_maelstrom'					=> 'Mahlstrom',
+		'uc_flames'						=> 'Legion der Unsterblichen',
+		
+		// City-State Information
+		'uc_city'						=> 'Stadtstaat',
+		'uc_uldah'						=> "Ul'dah",
+		'uc_limsa'						=> 'Limsa Lominsa',
+		'uc_gridania'					=> 'Gridania',
+		
+		// Profession information
+		'up_alchemist'					=> 'Alchemist',
+		'up_leatherworker'				=> 'Gerber',
+		'up_goldsmith'					=> 'Goldschmied',
+		'up_culinarian'					=> 'Gourmet',
+		'up_blacksmith'					=> 'Grobschmied',
+		'up_armorer'					=> 'Plattner',
+		'up_weaver'						=> 'Weber',
+		'up_carpenter'					=> 'Zimmerer',
+		'up_fisher'						=> 'Fischer',
+		'up_botanist'					=> 'Gärtner',
+		'up_miner'						=> 'Minenarbeiter',
+		
 		// Admin Settings
 		'core_sett_fs_gamesettings'		=> 'Final Fantasy XIV Einstellungen',
-		'uc_faction'					=> 'Fraktion',
-		'uc_faction_help'				=> 'Wähle die Standard-Fraktion',
+		'uc_faction'					=> 'Staatliche Gesellschaft',
+		'uc_faction_help'				=> 'Wähle die Staatliche Gesellschaft der Freien Gesellschaft.',
 	),
 );
 ?>
