@@ -49,9 +49,9 @@ if(!class_exists('ffxiv')) {
 				'decorate'	=> true,
 				'parent'	=> array(
 					'faction' => array(
-						'gridania'	=> 'all',
-						'limsa'		=> 'all',
-						'uldah'		=> 'all',
+						'twin_adder'	=> 'all',
+						'maelstrom'		=> 'all',
+						'flames'		=> 'all',
 					),
 				),
 			),
