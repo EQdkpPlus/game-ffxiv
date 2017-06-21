@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('ffxiv')) {
 	class ffxiv extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '3.1.1';
+		public $version				= '4.0.0';
 		protected $this_game		= 'ffxiv';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
@@ -79,16 +79,22 @@ if(!class_exists('ffxiv')) {
 		);
 
 		protected $class_colors = array(
-			0	=> '#808080',
-			1	=> '#808080',
-			2	=> '#808080',
-			3	=> '#808080',
-			4	=> '#808080',
-			5	=> '#808080',
-			6	=> '#808080',
-			7	=> '#009900',
-			8	=> '#808080',
-			9	=> '#009900',
+			0	=> '#732828',
+			1	=> '#732828',
+			2	=> '#2d3a80',
+			3	=> '#732828',
+			4	=> '#732828',
+			5	=> '#2d3a80',
+			6	=> '#732828',
+			7	=> '#346624',
+			8	=> '#732828',
+			9	=> '#346624',
+			10	=> '#732828',
+			11	=> '#2d3a80',
+			12	=> '#346624',
+			13	=> '#732828',
+			14	=> '#732828',
+			15	=> '#732828',
 		);
 
 		protected $glang		= array();

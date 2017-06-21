@@ -25,19 +25,21 @@ if ( !defined('EQDKP_INC') ){
 $english_array = array(
 	'classes' => array(
 		0	=> 'Unknown',
-		1	=> 'Blackmage',
+		1	=> 'Black Mage',
 		2	=> 'Warrior',
 		3	=> 'Dragoon',
 		4	=> 'Monk',
 		5	=> 'Paladin',
 		6	=> 'Bard',
-		7	=> 'Whitemage',
+		7	=> 'White Mage',
 		8 	=> 'Summoner',
 		9	=> 'Scholar',
 		10	=> 'Ninja',
 		11	=> 'Dark Knight',
 		12	=> 'Astrologian',
 		13	=> 'Machinist',
+		14 => 'Samurai',
+		15 => 'Red Mage',
 	),
 	'races' => array(
 		0	=> 'Unknown',

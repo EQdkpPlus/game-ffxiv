@@ -38,6 +38,8 @@ $german_array = array(
 		11	=> 'Dunkelritter',
 		12	=> 'Astrologe',
 		13	=> 'Maschinist',
+		14 => 'Samurai',
+		15 => 'Rotmagier',
 	),
 	'races' => array(
 		0	=> 'Unbekannt',
