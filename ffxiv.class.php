@@ -73,6 +73,7 @@ if(!class_exists('ffxiv')) {
 						4 	=> 'all',		// Miqote
 						5 	=> 'all',		// Lalafell
 						6 	=> 'all',		// Au Ra
+						7 	=> 'all',		// Viara
 					),
 				),
 			),
@@ -95,6 +96,9 @@ if(!class_exists('ffxiv')) {
 			13	=> '#732828',
 			14	=> '#732828',
 			15	=> '#732828',
+			16	=> '#2d3a80',
+			17	=> '#732828',
+			18	=> '#732828',
 		);
 
 		protected $glang		= array();

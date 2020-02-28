@@ -40,6 +40,9 @@ $english_array = array(
 		13	=> 'Machinist',
 		14 => 'Samurai',
 		15 => 'Red Mage',
+		16 => 'Gunbreaker',
+		17 => 'Dancer',
+		18 => 'Bluemage',
 	),
 	'races' => array(
 		0	=> 'Unknown',
@@ -49,6 +52,7 @@ $english_array = array(
 		4	=> 'Miqote',
 		5	=> 'Lalafell',
 		6	=> 'Au Ra',
+		7	=> 'Viara',
 	),
 	'factions' => array(
 		'twin_adder'	=> 'Order of the Twin Adder',

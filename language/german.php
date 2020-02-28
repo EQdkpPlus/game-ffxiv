@@ -40,6 +40,10 @@ $german_array = array(
 		13	=> 'Maschinist',
 		14 => 'Samurai',
 		15 => 'Rotmagier',
+		16 => 'Revolverklinge',
+		17 => 'Tänzer',
+		18 => 'Blaumagier',
+		
 	),
 	'races' => array(
 		0	=> 'Unbekannt',
@@ -49,6 +53,7 @@ $german_array = array(
 		4	=> 'Miqote',
 		5	=> 'Lalafell',
 		6	=> 'Au Ra',
+		7	=> 'Viara',
 	),
 	'factions' => array(
 		'twin_adder'	=> 'Bruderschaft der Morgenviper',
