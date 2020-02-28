@@ -26,7 +26,7 @@ if ( !defined('EQDKP_INC') ){
 if(!class_exists('ffxiv')) {
 	class ffxiv extends game_generic {
 		protected static $apiLevel	= 20;
-		public $version				= '4.0.0';
+		public $version				= '4.1.0';
 		protected $this_game		= 'ffxiv';
 		protected $types			= array('classes', 'races', 'factions', 'filters');
 		protected $classes			= array();
